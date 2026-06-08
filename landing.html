@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Carta de Amor Digital Eterna ❤️ | O Presente Que Nunca Esquece</title>
+<meta name="description" content="Transforme sua história em uma experiência digital emocionante, personalizada e eterna. Carta de Amor Digital por apenas R$89,99."/>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+<style>
+/* ===================== RESET & VARS ===================== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --pink:#ff6b9d;--rose:#ff4477;--red:#cc2244;
+  --gold:#f0c040;--gold2:#d4a017;
+  --cream:#fff5f7;--white:#fff;--dark:#1a0a0f;
+  --fh:'Great Vibes',cursive;
+  --fm:'Playfair Display',serif;
+  --fb:'Lato',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--dark);color:var(--dark);overflow-x:hidden}
+
+/* ===================== HELPERS ===================== */
+.hidden{display:none!important}
+.container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+.text-center{text-align:center}
+
+/* ===================== HEARTS RAIN ===================== */
+#hearts-rain{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.fh-span{position:absolute;top:-40px;animation:fall linear infinite;opacity:.45;user-select:none}
+@keyframes fall{0%{transform:translateY(0) rotate(0deg);opacity:.5}100%{transform:translateY(105vh) rotate(25deg);opacity:0}}
+
+/* ===================== STICKY BAR ===================== */
+.sticky-bar{
+  position:fixed;top:0;left:0;right:0;z-index:999;
+  background:linear-gradient(90deg,#7a0030,#c8004a,#7a0030);
+  padding:.55rem 1rem;text-align:center;
+  font-family:var(--fb);font-size:.88rem;font-weight:700;
+  color:var(--gold);letter-spacing:.05em;
+  box-shadow:0 2px 16px rgba(0,0,0,.4);
+}
+.sticky-bar span{color:#fff;margin:0 .6rem}
+
+/* ===================== SECTION BASE ===================== */
+section{position:relative;overflow:hidden}
+
+/* ===================== HERO ===================== */
+#hero{
+  min-height:100vh;
+  background:radial-gradient(ellipse at 60% 40%,#5c0030 0%,#1a0a0f 70%);
+  display:flex;align-items:center;justify-content:center;
+  padding:6rem 1.5rem 4rem;
+}
+#hero canvas{position:absolute;inset:0;pointer-events:none}
+
+.hero-inner{position:relative;z-index:2;text-align:center;max-width:820px;margin:0 auto}
+
+.hero-badge{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:var(--dark);font-weight:700;font-size:.82rem;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:.4rem 1.2rem;border-radius:50px;margin-bottom:1.6rem;
+  box-shadow:0 0 20px rgba(240,192,64,.5);
+}
+
+.hero-title{
+  font-family:var(--fh);
+  font-size:clamp(2.8rem,9vw,5.8rem);
+  color:var(--white);
+  text-shadow:0 0 40px rgba(255,107,157,.5);
+  line-height:1.15;margin-bottom:1.2rem;
+}
+
+.hero-sub{
+  font-family:var(--fm);font-style:italic;
+  font-size:clamp(1.1rem,3vw,1.55rem);
+  color:rgba(255,255,255,.88);
+  margin-bottom:1.4rem;line-height:1.5;
+}
+
+.hero-text{
+  font-size:1rem;color:rgba(255,255,255,.65);
+  line-height:1.8;max-width:580px;margin:0 auto 2.4rem;
+}
+
+/* price block */
+.price-block{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(240,192,64,.3);
+  border-radius:20px;
+  padding:1.6rem 2rem;
+  display:inline-block;
+  margin-bottom:2rem;
+  backdrop-filter:blur(8px);
+}
+.price-urgency{
+  font-size:.82rem;font-weight:700;letter-spacing:.12em;
+  color:var(--gold);text-transform:uppercase;margin-bottom:.6rem;
+}
+.price-old{
+  font-size:1rem;color:rgba(255,255,255,.5);
+  text-decoration:line-through;margin-bottom:.2rem;
+}
+.price-new{
+  font-family:var(--fm);font-size:clamp(2.2rem,6vw,3.4rem);
+  font-weight:700;color:var(--gold);
+  text-shadow:0 0 20px rgba(240,192,64,.6);
+  line-height:1;
+}
+.price-note{font-size:.82rem;color:rgba(255,255,255,.55);margin-top:.4rem}
+
+/* countdown */
+.countdown{
+  display:flex;gap:1rem;justify-content:center;
+  flex-wrap:wrap;margin:1.4rem 0 2rem;
+}
+.cd-box{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,68,119,.4);
+  border-radius:12px;padding:.8rem 1.2rem;
+  min-width:72px;text-align:center;
+  backdrop-filter:blur(6px);
+}
+.cd-box span{
+  font-family:var(--fm);font-size:2rem;font-weight:700;
+  color:var(--gold);display:block;line-height:1;
+  text-shadow:0 0 12px rgba(240,192,64,.5);
+}
+.cd-box small{font-size:.68rem;color:rgba(255,255,255,.55);letter-spacing:.1em;text-transform:uppercase}
+
+/* CTA button */
+.cta-btn{
+  display:inline-block;
+  font-family:var(--fm);font-size:clamp(1rem,2.5vw,1.25rem);
+  font-weight:700;letter-spacing:.04em;
+  padding:1.1rem 3rem;border-radius:50px;border:none;
+  background:linear-gradient(135deg,var(--pink),var(--red));
+  color:#fff;cursor:pointer;text-decoration:none;
+  box-shadow:0 0 24px rgba(255,68,119,.6),0 0 60px rgba(255,68,119,.25);
+  transition:transform .2s,box-shadow .3s;
+  animation:pulseCta 2.2s ease-in-out infinite;
+}
+.cta-btn:hover{transform:scale(1.06);box-shadow:0 0 40px rgba(255,68,119,.9),0 0 80px rgba(255,68,119,.4)}
+@keyframes pulseCta{
+  0%,100%{box-shadow:0 0 24px rgba(255,68,119,.6),0 0 60px rgba(255,68,119,.25)}
+  50%{box-shadow:0 0 40px rgba(255,68,119,.9),0 0 90px rgba(255,68,119,.4)}
+}
+.cta-sub{font-size:.8rem;color:rgba(255,255,255,.5);margin-top:.8rem}
+
+/* ===================== IMAGINE ===================== */
+#imagine{
+  background:linear-gradient(160deg,#fff5f7 0%,#ffe0ec 100%);
+  padding:6rem 1.5rem;
+}
+.section-label{
+  font-family:var(--fb);font-size:.78rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--rose);margin-bottom:.8rem;
+}
+.section-title{
+  font-family:var(--fh);font-size:clamp(2.2rem,6vw,3.8rem);
+  color:var(--red);margin-bottom:1rem;
+  text-shadow:0 0 20px rgba(204,34,68,.15);
+}
+.section-title.dark{color:var(--dark)}
+.section-title.gold{color:var(--gold);text-shadow:0 0 20px rgba(240,192,64,.4)}
+
+.imagine-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:1.4rem;margin:3rem 0;
+}
+.imagine-card{
+  background:#fff;border-radius:16px;padding:1.8rem 1.4rem;text-align:center;
+  box-shadow:0 6px 28px rgba(255,68,119,.12);
+  border:1px solid rgba(255,68,119,.1);
+  transition:transform .25s,box-shadow .25s;
+}
+.imagine-card:hover{transform:translateY(-6px);box-shadow:0 14px 40px rgba(255,68,119,.22)}
+.imagine-icon{font-size:2.4rem;margin-bottom:.8rem;display:block}
+.imagine-card h3{font-family:var(--fm);font-size:1rem;color:var(--dark);margin-bottom:.4rem}
+.imagine-card p{font-size:.88rem;color:#7a3050;line-height:1.6}
+
+.imagine-quote{
+  max-width:680px;margin:0 auto;text-align:center;
+  border-left:4px solid var(--pink);padding:1.4rem 2rem;
+  background:#fff;border-radius:0 12px 12px 0;
+  box-shadow:0 4px 20px rgba(255,68,119,.1);
+}
+.imagine-quote p{font-family:var(--fm);font-style:italic;font-size:1.1rem;color:#4a1528;line-height:1.8}
+.imagine-quote strong{color:var(--rose)}
+
+/* ===================== INCLUDES ===================== */
+#includes{
+  background:linear-gradient(135deg,#2d0018 0%,#4d0025 100%);
+  padding:6rem 1.5rem;
+}
+.includes-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:1.2rem;margin-top:3rem;
+}
+.inc-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,107,157,.25);
+  border-radius:14px;padding:1.6rem 1.2rem;text-align:center;
+  backdrop-filter:blur(6px);
+  transition:background .25s,transform .25s,border-color .25s;
+}
+.inc-card:hover{background:rgba(255,107,157,.12);transform:translateY(-4px);border-color:rgba(255,107,157,.5)}
+.inc-icon{font-size:2rem;margin-bottom:.7rem;display:block}
+.inc-card h3{font-family:var(--fm);font-size:.95rem;color:var(--gold);margin-bottom:.3rem}
+.inc-card p{font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.5}
+
+/* ===================== COMPARISON ===================== */
+#comparison{background:var(--cream);padding:6rem 1.5rem}
+.comp-table{
+  max-width:780px;margin:3rem auto 0;
+  border-radius:20px;overflow:hidden;
+  box-shadow:0 8px 40px rgba(255,68,119,.15);
+}
+.comp-header{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  background:linear-gradient(135deg,var(--rose),var(--red));
+  color:#fff;font-family:var(--fm);font-weight:700;
+  font-size:.9rem;text-align:center;
+}
+.comp-header div{padding:1rem .8rem}
+.comp-row{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  background:#fff;border-bottom:1px solid #fde0ea;
+  text-align:center;align-items:center;
+}
+.comp-row:nth-child(even){background:#fff5f7}
+.comp-row div{padding:.9rem .8rem;font-size:.9rem}
+.comp-row .item-name{font-family:var(--fm);color:var(--dark);font-weight:600;text-align:left;padding-left:1.2rem}
+.bad{color:#cc4444;font-size:1.1rem}
+.good{color:#22aa66;font-size:1.1rem;font-weight:700}
+.comp-footer{
+  background:linear-gradient(135deg,var(--rose),var(--red));
+  padding:1.2rem;text-align:center;
+  font-family:var(--fm);font-style:italic;color:#fff;font-size:1rem;
+}
+
+/* ===================== TESTIMONIALS ===================== */
+#testimonials{
+  background:linear-gradient(160deg,#3d0020 0%,#1a0a0f 80%);
+  padding:6rem 1.5rem;
+}
+.testi-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:1.6rem;margin-top:3rem;
+}
+.testi-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,107,157,.2);
+  border-radius:16px;padding:1.8rem;
+  backdrop-filter:blur(8px);
+  transition:transform .25s;
+}
+.testi-card:hover{transform:translateY(-5px)}
+.testi-stars{color:var(--gold);font-size:1.1rem;margin-bottom:.8rem;letter-spacing:.1em}
+.testi-text{
+  font-family:var(--fm);font-style:italic;
+  color:rgba(255,255,255,.88);font-size:.95rem;line-height:1.7;margin-bottom:1rem;
+}
+.testi-author{display:flex;align-items:center;gap:.8rem}
+.testi-avatar{
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,var(--pink),var(--red));
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;flex-shrink:0;
+}
+.testi-name{font-family:var(--fb);font-weight:700;color:var(--gold);font-size:.88rem}
+.testi-city{font-size:.78rem;color:rgba(255,255,255,.45)}
+
+/* ===================== GUARANTEE ===================== */
+#guarantee{
+  background:linear-gradient(160deg,#fff5f7,#ffe0ec);
+  padding:6rem 1.5rem;
+}
+.guarantee-box{
+  max-width:700px;margin:0 auto;text-align:center;
+  background:#fff;border-radius:24px;
+  padding:3rem 2.5rem;
+  box-shadow:0 12px 60px rgba(255,68,119,.15);
+  border:2px solid rgba(255,107,157,.2);
+}
+.guarantee-icon{font-size:4rem;margin-bottom:1.2rem;display:block}
+.guarantee-box h2{font-family:var(--fh);font-size:clamp(2rem,5vw,3rem);color:var(--rose);margin-bottom:1rem}
+.guarantee-box p{font-family:var(--fm);font-style:italic;color:#4a1528;line-height:1.8;font-size:1rem}
+.guarantee-tags{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:1.6rem}
+.g-tag{
+  background:linear-gradient(135deg,#fff0f5,#ffd6e8);
+  border:1px solid #f5c0d0;border-radius:50px;
+  padding:.4rem 1rem;font-size:.82rem;color:var(--red);font-weight:600;
+}
+
+/* ===================== OFFER ===================== */
+#offer{
+  background:radial-gradient(ellipse at center,#5c0030 0%,#1a0a0f 70%);
+  padding:6rem 1.5rem;
+  text-align:center;
+}
+.offer-box{
+  max-width:620px;margin:0 auto;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(240,192,64,.3);
+  border-radius:28px;padding:3rem 2.5rem;
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 80px rgba(255,68,119,.2);
+}
+.offer-label{
+  font-size:.78rem;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;
+}
+.offer-title{font-family:var(--fh);font-size:clamp(2rem,6vw,3.4rem);color:#fff;margin-bottom:1.4rem}
+.offer-old{font-size:1.1rem;color:rgba(255,255,255,.4);text-decoration:line-through;margin-bottom:.3rem}
+.offer-price{
+  font-family:var(--fm);font-size:clamp(3rem,8vw,5rem);
+  font-weight:700;color:var(--gold);
+  text-shadow:0 0 30px rgba(240,192,64,.6);
+  line-height:1;margin-bottom:.5rem;
+}
+.offer-note{font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:2rem}
+.cta-big{
+  display:inline-block;font-family:var(--fm);font-weight:700;
+  font-size:clamp(1.1rem,3vw,1.4rem);
+  padding:1.3rem 3.5rem;border-radius:50px;border:none;
+  background:linear-gradient(135deg,var(--pink),var(--red));
+  color:#fff;cursor:pointer;text-decoration:none;letter-spacing:.03em;
+  box-shadow:0 0 30px rgba(255,68,119,.7),0 0 70px rgba(255,68,119,.3);
+  animation:pulseCta 2s ease-in-out infinite;
+  transition:transform .2s;
+}
+.cta-big:hover{transform:scale(1.05)}
+.offer-security{
+  display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;
+  margin-top:1.6rem;
+}
+.sec-item{font-size:.78rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:.3rem}
+
+/* ===================== FAQ ===================== */
+#faq{background:var(--cream);padding:6rem 1.5rem}
+.faq-list{max-width:780px;margin:3rem auto 0;display:flex;flex-direction:column;gap:1rem}
+.faq-item{
+  background:#fff;border-radius:14px;
+  border:1px solid #fde0ea;overflow:hidden;
+  box-shadow:0 3px 16px rgba(255,68,119,.08);
+}
+.faq-q{
+  padding:1.2rem 1.5rem;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--fm);font-weight:700;color:var(--dark);font-size:1rem;
+  transition:background .2s;
+}
+.faq-q:hover{background:#fff0f5}
+.faq-q .faq-arrow{color:var(--rose);transition:transform .3s;font-size:1.1rem;flex-shrink:0}
+.faq-item.open .faq-arrow{transform:rotate(180deg)}
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height .4s ease,padding .3s;
+  font-size:.95rem;color:#6b3040;line-height:1.7;
+  padding:0 1.5rem;
+}
+.faq-item.open .faq-a{max-height:200px;padding:.2rem 1.5rem 1.2rem}
+
+/* ===================== FOOTER ===================== */
+#footer{
+  background:linear-gradient(160deg,#3d0020,#1a0a0f);
+  padding:5rem 1.5rem 3rem;text-align:center;
+}
+.footer-msg{
+  font-family:var(--fh);font-size:clamp(2rem,6vw,3.6rem);
+  color:var(--gold);text-shadow:0 0 30px rgba(240,192,64,.4);
+  margin-bottom:1rem;line-height:1.2;
+}
+.footer-sub{
+  font-family:var(--fm);font-style:italic;
+  color:rgba(255,255,255,.7);font-size:1rem;line-height:1.7;
+  max-width:520px;margin:0 auto 2.5rem;
+}
+.wa-btn{
+  display:inline-flex;align-items:center;gap:.7rem;
+  font-family:var(--fm);font-weight:700;font-size:1.15rem;
+  padding:1.1rem 2.8rem;border-radius:50px;border:none;
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  color:#fff;cursor:pointer;text-decoration:none;
+  box-shadow:0 0 24px rgba(37,211,102,.5),0 0 60px rgba(37,211,102,.2);
+  transition:transform .2s,box-shadow .3s;
+}
+.wa-btn:hover{transform:scale(1.06);box-shadow:0 0 40px rgba(37,211,102,.7)}
+.footer-note{margin-top:1.4rem;font-size:.78rem;color:rgba(255,255,255,.35)}
+.footer-hearts{font-size:2rem;margin-top:2.5rem;animation:heartbeat 1.8s ease-in-out infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+
+/* ===================== SCROLL REVEAL ===================== */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ===================== RESPONSIVE ===================== */
+@media(max-width:640px){
+  .comp-table{font-size:.8rem}
+  .comp-header div,.comp-row div{padding:.7rem .4rem}
+  .offer-box,.guarantee-box{padding:2rem 1.4rem}
+  .testi-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HEARTS RAIN -->
+<div id="hearts-rain"></div>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar">
+  🔥 OFERTA ESPECIAL <span>|</span> Apenas <strong>R$ 89,99</strong> <span>|</span> Vagas Limitadas — Garanta a Sua Agora!
+</div>
+
+<!-- ========================= HERO ========================= -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-inner">
+    <div class="hero-badge">✨ Presente Exclusivo &amp; Personalizado</div>
+    <h1 class="hero-title">❤️ O Presente Que Seu Amor<br/>Nunca Vai Esquecer</h1>
+    <p class="hero-sub">Transforme sua história em uma experiência digital emocionante, personalizada e eterna.</p>
+    <p class="hero-text">Enquanto flores murcham e presentes se desgastam com o tempo, sua Carta de Amor Digital permanecerá viva para sempre — acessível a qualquer momento, em qualquer lugar.</p>
+
+    <div class="price-block">
+      <p class="price-urgency">🔥 Oferta Especial por Tempo Limitado</p>
+      <p class="price-old">De: R$ 199,00</p>
+      <p class="price-new">R$ 89,99</p>
+      <p class="price-note">Uma única oportunidade para transformar memórias em algo eterno.</p>
+    </div>
+
+    <!-- COUNTDOWN -->
+    <div class="countdown">
+      <div class="cd-box"><span id="cd-h">00</span><small>Horas</small></div>
+      <div class="cd-box"><span id="cd-m">00</span><small>Min</small></div>
+      <div class="cd-box"><span id="cd-s">00</span><small>Seg</small></div>
+    </div>
+
+    <a href="https://wa.me/5511995818611?text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20a%20minha%20carta%20de%20amor!" target="_blank" class="cta-btn">💌 Quero Eternizar Meu Amor Agora</a>
+    <p class="cta-sub">🔒 Pagamento seguro &nbsp;·&nbsp; Entrega rápida &nbsp;·&nbsp; 100% personalizado</p>
+  </div>
+</section>
+
+<!-- ========================= IMAGINE ========================= -->
+<section id="imagine">
+  <div class="container text-center">
+    <p class="section-label reveal">A Experiência</p>
+    <h2 class="section-title reveal">Imagine a Reação Dela... 😍</h2>
+    <p class="hero-text reveal" style="max-width:640px;margin:0 auto 1rem;color:#7a3050">
+      Imagine a pessoa que você ama abrindo um link ou escaneando um QR Code e encontrando tudo isso esperando por ela:
+    </p>
+
+    <div class="imagine-grid">
+      <div class="imagine-card reveal">
+        <span class="imagine-icon">❤️</span>
+        <h3>Carta Exclusiva</h3>
+        <p>Uma carta escrita especialmente para ela, com suas palavras e sentimentos.</p>
+      </div>
+      <div class="imagine-card reveal">
+        <span class="imagine-icon">📸</span>
+        <h3>Galeria de Fotos</h3>
+        <p>As fotos mais marcantes e emocionantes da história de vocês dois.</p>
+      </div>
+      <div class="imagine-card reveal">
+        <span class="imagine-icon">🎵</span>
+        <h3>Música do Casal</h3>
+        <p>A música que faz vocês se lembrarem de cada momento especial.</p>
+      </div>
+      <div class="imagine-card reveal">
+        <span class="imagine-icon">⏳</span>
+        <h3>Contador de Amor</h3>
+        <p>Um contador mostrando exatamente o tempo que estão juntos.</p>
+      </div>
+      <div class="imagine-card reveal">
+        <span class="imagine-icon">✨</span>
+        <h3>Experiência Única</h3>
+        <p>Animações, estrelas, corações — uma experiência sensorial completa.</p>
+      </div>
+    </div>
+
+    <div class="imagine-quote reveal">
+      <p>Não é apenas um presente.<br/>
+      É uma <strong>lembrança que poderá ser revisitada</strong> daqui a meses, anos ou até décadas.<br/>
+      Uma obra de arte digital criada exclusivamente para vocês dois.</p>
+    </div>
+
+    <div style="margin-top:2.5rem" class="reveal">
+      <a href="https://wa.me/5511995818611?text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20a%20minha%20carta%20de%20amor!" target="_blank" class="cta-btn">💌 Quero Criar Minha Carta Agora</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= INCLUDES ========================= -->
+<section id="includes">
+  <div class="container text-center">
+    <p class="section-label reveal" style="color:var(--gold)">Tudo Incluído</p>
+    <h2 class="section-title gold reveal">O Que Está Incluso na Sua Carta</h2>
+    <p style="color:rgba(255,255,255,.65);max-width:520px;margin:0 auto;font-size:.95rem" class="reveal">
+      Tudo que você precisa para criar uma experiência inesquecível está incluído no valor único.
+    </p>
+
+    <div class="includes-grid">
+      <div class="inc-card reveal"><span class="inc-icon">💌</span><h3>Carta Personalizada</h3><p>Texto escrito com suas palavras e sentimentos</p></div>
+      <div class="inc-card reveal"><span class="inc-icon">📸</span><h3>Galeria de Fotos</h3><p>Até 20 fotos em carrossel elegante</p></div>
+      <div class="inc-card reveal"><span class="inc-icon">🎵</span><h3>Música Especial</h3><p>O som que representa o amor de vocês</p></div>
+      <div class="inc-card reveal"><span class="inc-icon">⏳</span><h3>Contador de Amor</h3><p>Anos, meses, dias, horas e segundos juntos</p></div>
+      <div class="inc-card reveal"><span class="inc-icon">❤️</span><h3>Nossa História</h3><p>Linha do tempo interativa do relacionamento</p></div>
+      <div class="inc-card reveal"><span class="inc-icon">🌹</span><h3>Design Exclusivo</h3><p>Visual premium com animações cinematográficas</p></div>
+      <div class="inc-card reveal"><span class="inc-icon">📱</span><h3>Acesso Total</h3><p>Funciona perfeitamente no celular e computador</p></div>
+      <div class="inc-card reveal"><span class="inc-icon">🔗</span><h3>Link Exclusivo</h3><p>URL personalizada para compartilhar a qualquer hora</p></div>
+      <div class="inc-card reveal"><span class="inc-icon">📷</span><h3>QR Code</h3><p>QR Code elegante para surpreender na hora certa</p></div>
+      <div class="inc-card reveal"><span class="inc-icon">✨</span><h3>Animações Românticas</h3><p>Corações, estrelas e efeitos visuais encantadores</p></div>
+    </div>
+
+    <div style="margin-top:3rem" class="reveal">
+      <a href="https://wa.me/5511995818611?text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20a%20minha%20carta%20de%20amor!" target="_blank" class="cta-btn">💌 Quero Tudo Isso Por R$ 89,99</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= COMPARISON ========================= -->
+<section id="comparison">
+  <div class="container text-center">
+    <p class="section-label reveal">A Diferença</p>
+    <h2 class="section-title reveal" style="color:var(--red)">Por Que Esse Presente É Diferente?</h2>
+    <p style="color:#7a3050;max-width:520px;margin:0 auto;font-size:.95rem" class="reveal">
+      Outros presentes desaparecem. Este fica para sempre.
+    </p>
+
+    <div class="comp-table reveal">
+      <div class="comp-header">
+        <div>Presente</div>
+        <div>Dura para sempre?</div>
+        <div>Impacto emocional?</div>
+      </div>
+      <div class="comp-row"><div class="item-name">💐 Flores</div><div class="bad">✗ Murcha em dias</div><div>Médio</div></div>
+      <div class="comp-row"><div class="item-name">🍫 Chocolate</div><div class="bad">✗ Acaba rápido</div><div>Baixo</div></div>
+      <div class="comp-row"><div class="item-name">🥃 Perfume</div><div class="bad">✗ Termina</div><div>Médio</div></div>
+      <div class="comp-row"><div class="item-name">💍 Joias</div><div style="color:#e0a020">~ Pode perder</div><div>Alto</div></div>
+      <div class="comp-row" style="background:linear-gradient(135deg,#fff0f5,#ffd6e8)">
+        <div class="item-name" style="color:var(--red);font-size:1rem">💌 Carta Digital Eterna</div>
+        <div class="good">✓ Para sempre</div>
+        <div class="good">✓ MÁXIMO</div>
+      </div>
+      <div class="comp-footer">"Ela vai abrir, chorar de emoção e guardar para sempre. Garantido."</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= TESTIMONIALS ========================= -->
+<section id="testimonials">
+  <div class="container text-center">
+    <p class="section-label reveal" style="color:var(--gold)">Histórias Reais</p>
+    <h2 class="section-title gold reveal">Quem Já Eternizou Seu Amor</h2>
+
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Ela chorou quando abriu. Ficou olhando a carta por horas. Foi o presente mais emocionante que já dei em toda a minha vida. Valeu muito mais do que paguei."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👨</div>
+          <div><p class="testi-name">Rafael M.</p><p class="testi-city">São Paulo, SP</p></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Dei de presente no nosso aniversário de 3 anos. Ele ficou sem palavras. A reação dele foi algo que eu nunca vou esquecer. Simplesmente perfeito."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👩</div>
+          <div><p class="testi-name">Camila R.</p><p class="testi-city">Rio de Janeiro, RJ</p></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Valeu cada centavo. Ficou perfeito, exatamente como eu sonhei. O atendimento foi rápido e o resultado superou todas as minhas expectativas."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👨</div>
+          <div><p class="testi-name">Lucas T.</p><p class="testi-city">Belo Horizonte, MG</p></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Mandei o QR Code impresso em um cartão. Ela escaneou e começou a chorar na mesa do restaurante. Todo mundo perguntou o que era. Melhor presente da minha vida."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👨</div>
+          <div><p class="testi-name">André S.</p><p class="testi-city">Curitiba, PR</p></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Nunca imaginei que um presente digital pudesse ser tão emocionante. Meu namorado fica abrindo toda semana até hoje. Recomendo de olhos fechados!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👩</div>
+          <div><p class="testi-name">Fernanda L.</p><p class="testi-city">Fortaleza, CE</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= GUARANTEE ========================= -->
+<section id="guarantee">
+  <div class="container">
+    <div class="guarantee-box reveal">
+      <span class="guarantee-icon">❤️</span>
+      <h2>Feito com Carinho e Personalização Total</h2>
+      <p>
+        Cada carta é criada individualmente com as informações fornecidas por você.<br/><br/>
+        Nenhuma página é igual à outra.<br/>
+        Cada história é única. Cada amor é diferente.<br/><br/>
+        <strong style="color:var(--rose)">Você não está comprando um template. Está eternizando a sua história.</strong>
+      </p>
+      <div class="guarantee-tags">
+        <span class="g-tag">✓ 100% Personalizado</span>
+        <span class="g-tag">✓ Entrega Rápida</span>
+        <span class="g-tag">✓ Suporte Completo</span>
+        <span class="g-tag">✓ Link Vitalício</span>
+        <span class="g-tag">✓ QR Code Incluso</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= OFFER ========================= -->
+<section id="offer">
+  <div class="container">
+    <div class="offer-box reveal">
+      <p class="offer-label">🔥 Oferta Especial — Tempo Limitado</p>
+      <h2 class="offer-title">Sua Carta de Amor<br/>Eterna por apenas</h2>
+      <p class="offer-old">De R$ 199,00</p>
+      <p class="offer-price">R$ 89,99</p>
+      <p class="offer-note">
+        Menos do que um jantar para dois.<br/>
+        Mas com um impacto emocional que <strong style="color:var(--gold)">dura para sempre.</strong>
+      </p>
+      <a href="https://wa.me/5511995818611?text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20a%20minha%20carta%20de%20amor!" target="_blank" class="cta-big">💌 QUERO MINHA CARTA DE AMOR AGORA</a>
+      <div class="offer-security">
+        <span class="sec-item">🔒 Pagamento Seguro</span>
+        <span class="sec-item">⚡ Entrega Rápida</span>
+        <span class="sec-item">💯 Satisfação Garantida</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= FAQ ========================= -->
+<section id="faq">
+  <div class="container">
+    <p class="section-label text-center reveal">Dúvidas?</p>
+    <h2 class="section-title text-center reveal" style="color:var(--red)">Perguntas Frequentes</h2>
+
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q">Como funciona? <span class="faq-arrow">▼</span></div>
+        <div class="faq-a">Você envia suas informações pelo WhatsApp — nome, texto da carta, fotos, música e datas. Nós criamos a página personalizada e enviamos o link e o QR Code para você surpreender seu amor.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Quanto tempo leva para ficar pronto? <span class="faq-arrow">▼</span></div>
+        <div class="faq-a">Geralmente entre 24 e 48 horas após o recebimento de todas as informações. Em casos urgentes, consulte disponibilidade pelo WhatsApp.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Posso enviar minhas próprias fotos? <span class="faq-arrow">▼</span></div>
+        <div class="faq-a">Sim! Você pode enviar até 20 fotos para compor a galeria. Quanto mais fotos e detalhes você compartilhar, mais especial e personalizada ficará a carta.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Posso escolher a música? <span class="faq-arrow">▼</span></div>
+        <div class="faq-a">Com certeza. Você escolhe a música que representa o amor de vocês e nós a incorporamos na página. É só informar o nome da música ou enviar o arquivo.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Recebo um QR Code personalizado? <span class="faq-arrow">▼</span></div>
+        <div class="faq-a">Sim! Você recebe um QR Code elegante que pode ser impresso, enviado em uma mensagem, colocado em um cartão ou embrulho. Ao escanear, a pessoa é direcionada direto para a carta.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Funciona no celular? <span class="faq-arrow">▼</span></div>
+        <div class="faq-a">Perfeitamente! A carta foi desenvolvida para funcionar de forma linda tanto no celular quanto no computador ou tablet, sem instalar nenhum aplicativo.</div>
+      </div>
+    </div>
+
+    <div class="text-center reveal" style="margin-top:3rem">
+      <a href="https://wa.me/5511995818611?text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20a%20minha%20carta%20de%20amor!" target="_blank" class="cta-btn">💬 Ainda tem dúvidas? Fale Comigo no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= FOOTER ========================= -->
+<footer id="footer">
+  <div class="container">
+    <p class="footer-msg">❤️ Algumas histórias merecem<br/>ser lembradas para sempre.</p>
+    <p class="footer-sub">Transforme seu amor em uma experiência inesquecível. Um presente que vai fazer ela(e) chorar de emoção.</p>
+    <a href="https://wa.me/5511995818611?text=Ol%C3%A1%2C%20gostaria%20de%20adquirir%20a%20minha%20carta%20de%20amor!" target="_blank" class="wa-btn">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      💌 Fazer Meu Pedido Agora
+    </a>
+    <p class="footer-note">© 2025 Carta de Amor Digital Eterna · Todos os direitos reservados</p>
+    <div class="footer-hearts">💕</div>
+  </div>
+</footer>
+
+<script>
+/* ===== HEARTS RAIN ===== */
+(function(){
+  const c = document.getElementById('hearts-rain');
+  const s = ['❤️','💕','💖','💗','🌹'];
+  function spawn(){
+    const h = document.createElement('span');
+    h.className = 'fh-span';
+    h.textContent = s[Math.floor(Math.random()*s.length)];
+    h.style.cssText = `left:${Math.random()*100}vw;font-size:${0.7+Math.random()*1.2}rem;animation-duration:${7+Math.random()*8}s;animation-delay:${Math.random()*4}s`;
+    c.appendChild(h);
+    setTimeout(()=>h.remove(),(15+Math.random()*8)*1000);
+  }
+  for(let i=0;i<16;i++) spawn();
+  setInterval(spawn, 1000);
+})();
+
+/* ===== HERO PARTICLES ===== */
+(function(){
+  const canvas = document.getElementById('hero-canvas');
+  const ctx = canvas.getContext('2d');
+  function resize(){ canvas.width=window.innerWidth; canvas.height=window.innerHeight; }
+  resize(); window.addEventListener('resize', resize);
+  const pts = Array.from({length:30},()=>({
+    x:Math.random()*window.innerWidth,
+    y:Math.random()*window.innerHeight+window.innerHeight,
+    size:3+Math.random()*8,
+    speed:.3+Math.random()*.5,
+    drift:(Math.random()-.5)*.3,
+    opacity:.1+Math.random()*.4
+  }));
+  function heart(ctx,x,y,s){
+    ctx.beginPath();ctx.moveTo(x,y+s*.3);
+    ctx.bezierCurveTo(x,y,x-s,y,x-s,y+s*.3);
+    ctx.bezierCurveTo(x-s,y+s*.65,x,y+s*.9,x,y+s*1.1);
+    ctx.bezierCurveTo(x,y+s*.9,x+s,y+s*.65,x+s,y+s*.3);
+    ctx.bezierCurveTo(x+s,y,x,y,x,y+s*.3);
+    ctx.closePath();
+  }
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    pts.forEach(p=>{
+      p.y-=p.speed; p.x+=p.drift;
+      if(p.y<-20){p.y=canvas.height+20;p.x=Math.random()*canvas.width;}
+      ctx.save();ctx.globalAlpha=p.opacity;ctx.fillStyle='#ff6b9d';
+      heart(ctx,p.x,p.y,p.size);ctx.fill();ctx.restore();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ===== COUNTDOWN — 24h a partir do carregamento ===== */
+(function(){
+  const end = Date.now() + 24*60*60*1000;
+  function tick(){
+    const diff = Math.max(0, Math.floor((end - Date.now())/1000));
+    const h = Math.floor(diff/3600), m = Math.floor((diff%3600)/60), s = diff%60;
+    document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
+    document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+  }
+  tick(); setInterval(tick,1000);
+})();
+
+/* ===== SCROLL REVEAL ===== */
+(function(){
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+})();
+
+/* ===== FAQ ACCORDION ===== */
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!isOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

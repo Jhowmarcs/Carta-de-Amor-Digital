@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carta Digital de Amor 💌</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== CHUVA DE CORAÇÕES (global) ===== -->
+  <div id="hearts-rain"></div>
+
+  <!-- ===== 1. TELA DE ABERTURA ===== -->
+  <section id="opening" class="screen active">
+    <canvas id="particles-canvas"></canvas>
+    <div class="opening-content fade-in">
+      <p class="subtitle">Uma surpresa especial foi preparada para você ❤️</p>
+      <h1 class="beloved-name">Meu Amor</h1>
+      <button id="open-letter-btn" class="glow-btn">Abrir Minha Carta 💌</button>
+    </div>
+  </section>
+
+  <!-- ===== 2 & 3. ANIMAÇÃO DA CARTA ===== -->
+  <section id="letter-section" class="screen hidden">
+    <div class="letter-wrapper">
+      <div id="envelope" class="envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <span class="env-heart">❤️</span>
+        </div>
+      </div>
+      <div id="letter-paper" class="letter-paper hidden">
+        <div class="letter-content">
+          <p class="letter-date">Para o amor da minha vida,</p>
+          <div id="typed-text" class="typed-text"></div>
+          <p class="letter-signature">Com todo meu amor,<br /><em>Sua pessoa favorita 💕</em></p>
+        </div>
+      </div>
+    </div>
+    <button id="continue-btn" class="glow-btn hidden">Continuar ➜</button>
+  </section>
+
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main id="main-content" class="hidden">
+
+    <!-- ===== 4. GALERIA DE FOTOS ===== -->
+    <section class="section" id="gallery-section">
+      <h2 class="section-title">Nossos Momentos 📸</h2>
+      <div class="carousel-container">
+        <button class="carousel-btn prev" id="prev-btn">&#10094;</button>
+        <div class="carousel-track" id="carousel-track">
+          <!-- As fotos são geradas pelo JS — substitua as URLs pelas suas fotos -->
+        </div>
+        <button class="carousel-btn next" id="next-btn">&#10095;</button>
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </div>
+      <!-- Lightbox -->
+      <div id="lightbox" class="lightbox hidden">
+        <span id="lightbox-close" class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="foto ampliada" />
+      </div>
+    </section>
+
+    <!-- ===== 5. NOSSA HISTÓRIA ===== -->
+    <section class="section" id="timeline-section">
+      <h2 class="section-title">Nossa História 💫</h2>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <!-- ===== 6. CONTADOR DE AMOR ===== -->
+    <section class="section" id="counter-section">
+      <h2 class="section-title">Juntos há... ⏳</h2>
+      <div class="counter-grid" id="counter-grid">
+        <div class="counter-box"><span id="cnt-years">0</span><small>Anos</small></div>
+        <div class="counter-box"><span id="cnt-months">0</span><small>Meses</small></div>
+        <div class="counter-box"><span id="cnt-days">0</span><small>Dias</small></div>
+        <div class="counter-box"><span id="cnt-hours">0</span><small>Horas</small></div>
+        <div class="counter-box"><span id="cnt-minutes">0</span><small>Minutos</small></div>
+        <div class="counter-box"><span id="cnt-seconds">0</span><small>Segundos</small></div>
+      </div>
+    </section>
+
+    <!-- ===== 7. MÚSICA ROMÂNTICA ===== -->
+    <section class="section" id="music-section">
+      <h2 class="section-title">Nossa Música 🎵</h2>
+      <div class="player">
+        <p class="song-title" id="song-title">♪ Coloque sua música aqui</p>
+        <audio id="audio-player" preload="auto">
+          <!-- Substitua o src pelo caminho do seu arquivo de áudio -->
+          <source src="music.mp3" type="audio/mpeg" />
+        </audio>
+        <div class="player-controls">
+          <button id="play-pause-btn" class="glow-btn small">▶ Play</button>
+          <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.7" class="volume-slider" />
+          <span class="volume-icon">🔊</span>
+        </div>
+        <div class="progress-bar-bg"><div id="progress-bar" class="progress-bar"></div></div>
+      </div>
+    </section>
+
+    <!-- ===== 8. 100 MOTIVOS ===== -->
+    <section class="section" id="reasons-section">
+      <h2 class="section-title">100 Motivos Pelos Quais Eu Te Amo 💝</h2>
+      <div class="reasons-grid" id="reasons-grid"></div>
+    </section>
+
+    <!-- ===== 9. MENSAGENS ROMÂNTICAS ===== -->
+    <section class="section" id="messages-section">
+      <h2 class="section-title">Palavras do Coração 💬</h2>
+      <div class="messages-grid" id="messages-grid"></div>
+    </section>
+
+    <!-- ===== 10. CÉU DE ESTRELAS ===== -->
+    <section class="section starry-sky" id="stars-section">
+      <canvas id="stars-canvas"></canvas>
+      <div class="stars-content fade-in-scroll">
+        <h2 class="section-title white">Cada estrela no céu me lembra de você ✨</h2>
+        <p class="stars-quote">"Olhei para o universo inteiro e só encontrei você."</p>
+      </div>
+    </section>
+
+    <!-- ===== 14. ROLETA SURPRESA ===== -->
+    <section class="section" id="roulette-section">
+      <h2 class="section-title">Roleta Surpresa 🎡</h2>
+      <p class="roulette-subtitle">Deixe o destino decidir o próximo lugar especial de vocês!</p>
+      <div class="roulette-wrap">
+        <div class="roulette-pointer">▼</div>
+        <canvas id="roulette-canvas" width="340" height="340"></canvas>
+      </div>
+      <button id="spin-btn" class="glow-btn big">Girar a Roleta 🎰</button>
+      <div id="roulette-result" class="roulette-result hidden"></div>
+    </section>
+
+    <!-- ===== 15. CAÇA-PALAVRAS ===== -->
+    <section class="section" id="wordsearch-section">
+      <h2 class="section-title">Caça-Palavras do Amor 💌</h2>
+      <p class="ws-subtitle">Encontre todas as palavras escondidas no grid!</p>
+      <div class="ws-layout">
+        <div>
+          <div id="ws-grid" class="ws-grid"></div>
+          <p id="ws-msg" class="ws-msg"></p>
+        </div>
+        <div class="ws-words-panel">
+          <h3 class="ws-words-title">Palavras para encontrar:</h3>
+          <ul id="ws-words-list" class="ws-words-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 12. PEDIDO ESPECIAL ===== -->
+    <section class="section" id="special-section">
+      <h2 class="section-title">Um Pedido Especial 💌</h2>
+      <button id="special-btn" class="glow-btn big pulse">Clique Aqui ❤️</button>
+    </section>
+
+    <!-- ===== 13. ENCERRAMENTO ===== -->
+    <section class="section ending-section" id="ending-section">
+      <div class="ending-content fade-in-scroll">
+        <h2 class="ending-title">Eu te amo hoje, amanhã e para sempre ❤️</h2>
+        <p class="couple-names" id="couple-names">Eu & Você</p>
+        <p class="relationship-date" id="relationship-date">Desde sempre...</p>
+        <div class="ending-hearts">💕</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== MODAL: PEDIDO ESPECIAL ===== -->
+  <div id="special-modal" class="modal hidden">
+    <div class="modal-inner">
+      <p class="modal-msg">"Você é a melhor parte da minha vida."</p>
+      <button id="modal-close" class="glow-btn small">💕 Fechar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
