@@ -569,9 +569,8 @@ $('modal-close').addEventListener('click', () => {
    15. CACA-PALAVRAS
    ============================================================ */
 (function initWordSearch() {
-  const WORDS = ['AMOR','BEIJO','ABRACO','SORRISO','CARINHO',
-                 'PAIXAO','ETERNO','JUNTOS','FELIZ','LINDO'];
-  const SIZE  = 12;
+  const WORDS = ['EU','TE','AMO'];
+  const SIZE  = 6;
   let grid    = [];
   let cells   = [];
   let selecting = false;
@@ -585,7 +584,7 @@ $('modal-close').addEventListener('click', () => {
   }
 
   // Direções: horizontal, vertical, diagonal
-  const DIRS = [[0,1],[1,0],[1,1],[0,-1],[-1,0],[-1,-1],[1,-1],[-1,1]];
+  const DIRS = [[0,1],[1,0]];
 
   function placeWord(word) {
     const letters = word.replace('Ç','C').split('');
@@ -672,7 +671,7 @@ $('modal-close').addEventListener('click', () => {
       const li = $('word-' + match);
       if (li) li.classList.add('found-word');
       if (found.length === WORDS.length) {
-        $('ws-msg').textContent = '🎉 Parabéns! Você encontrou todas as palavras! 💕';
+        $('ws-msg').textContent = '🎉 Você encontrou! Eu te amo! 💕';
       }
       return true;
     }
