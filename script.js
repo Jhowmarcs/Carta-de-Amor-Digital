@@ -6,10 +6,10 @@
    ★ CONFIGURAÇÕES — edite aqui para personalizar
    ────────────────────────────────────────────── */
 const CONFIG = {
-  belovedName:      "Meu Amor",           // Nome exibido na abertura
+  belovedName:      "Emily",           // Nome exibido na abertura
   coupleName:       "Eu & Você",          // Nomes do casal no encerramento
-  relationshipDate: "2020-01-15",         // Data de início do relacionamento (YYYY-MM-DD)
-  relationshipLabel:"Desde 15 de Janeiro de 2020",
+  relationshipDate: "2024-10-26",         // Data de início do relacionamento (YYYY-MM-DD)
+  relationshipLabel:"Desde 26 de Outubro de 2024",
 
   letterText: `Meu amor,
 
@@ -26,12 +26,25 @@ Te amo mais do que qualquer palavra consegue dizer. ❤️`,
   /* Fotos do carrossel: substitua pelas URLs/caminhos das suas fotos.
      Adicione quantas quiser (até 20 recomendado). */
   photos: [
-    { src: "https://picsum.photos/seed/love1/700/525", caption: "Nosso primeiro encontro 💕" },
-    { src: "https://picsum.photos/seed/love2/700/525", caption: "Uma noite inesquecível ✨" },
-    { src: "https://picsum.photos/seed/love3/700/525", caption: "Sorrisos que iluminam 😊" },
-    { src: "https://picsum.photos/seed/love4/700/525", caption: "Aventuras juntos 🌟" },
-    { src: "https://picsum.photos/seed/love5/700/525", caption: "Felicidade pura 🌹" },
-    { src: "https://picsum.photos/seed/love6/700/525", caption: "Momentos especiais 💖" },
+    { src: "static/02ae95b1-0a79-4835-8679-26307651e559.jpeg", caption: "Momentos especiais 💕" },
+    { src: "static/043dcd29-c101-4ddf-ad05-b84c26e18648.jpeg", caption: "Uma noite inesquecível ✨" },
+    { src: "static/0e50a622-b049-4bf4-a240-3739f98fc194.jpeg", caption: "Sorrisos que iluminam 😊" },
+    { src: "static/13fd9167-7b51-4ea5-8dbd-b39a81ff082e.jpeg", caption: "Aventuras juntos 🌟" },
+    { src: "static/141db96a-70f4-47ac-bef8-c81102969ac9.jpeg", caption: "Felicidade pura 🌹" },
+    { src: "static/1941bab6-c051-43d8-b3f4-923e510e795c.jpeg", caption: "Nosso primeiro encontro 💖" },
+    { src: "static/1a460ef3-9cac-481f-9859-1a9986c1ed7e.jpeg", caption: "Sempre juntos 💑" },
+    { src: "static/3f9a99a3-5565-41d0-8816-cc7d52c59b0b.jpeg", caption: "Amor de verdade ❤️" },
+    { src: "static/41ceba65-3968-4a36-b18c-107cc43062a3.jpeg", caption: "Memórias eternas 🌸" },
+    { src: "static/70c4fa6b-c5c6-44e9-8239-3ddea52465d5.jpeg", caption: "Instantes perfeitos ✨" },
+    { src: "static/7829e269-ce83-45fb-b83d-751cb0a74945.jpeg", caption: "Nosso mundo 🌍" },
+    { src: "static/7aecf124-05cd-41a8-9f1e-deed39a469a0.jpeg", caption: "Você ilumina meu dia ☀️" },
+    { src: "static/8c6973f5-25a6-4084-a238-d77992a4bdae.jpeg", caption: "Um sorriso seu 😊" },
+    { src: "static/9d805a11-0442-4306-a6b9-ce294451e854.jpeg", caption: "Cumplicidade 💞" },
+    { src: "static/a02b47ff-952b-4871-9c3d-245c5724c662.jpeg", caption: "Para sempre 🕊️" },
+    { src: "static/c7810c0b-034b-49e8-86ea-dc9c69407470.jpeg", caption: "Nossa história 📖" },
+    { src: "static/cfab9687-bd55-4724-bc65-0a3e80036b72.jpeg", caption: "Cada detalhe importa 💫" },
+    { src: "static/d8778e51-5c4f-4d58-bfff-15cabc0b28c6.jpeg", caption: "Momentos que guardarei 🎀" },
+    { src: "static/f301d127-6dd8-4eb7-a7a1-7582f87febef.jpeg", caption: "Te amo 💝" },
   ],
 
   /* Linha do tempo */
@@ -272,11 +285,14 @@ function buildCarousel() {
   let current  = 0;
 
   photos.forEach((p, i) => {
+    const slide = document.createElement('div');
+    slide.className = 'carousel-slide';
     const img = document.createElement('img');
     img.src   = p.src;
     img.alt   = p.caption;
     img.addEventListener('click', () => openLightbox(p.src));
-    track.appendChild(img);
+    slide.appendChild(img);
+    track.appendChild(slide);
 
     const dot = document.createElement('span');
     dot.className = 'dot' + (i === 0 ? ' active' : '');
@@ -286,8 +302,8 @@ function buildCarousel() {
 
   function goTo(n) {
     current = (n + photos.length) % photos.length;
-    track.style.transition = 'transform 0.5s cubic-bezier(.4,0,.2,1)';
-    track.style.transform  = `translateX(-${current * 100}%)`;
+    const slideWidth = track.parentElement.offsetWidth;
+    track.style.transform = `translateX(-${current * slideWidth}px)`;
     document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
   }
 
@@ -355,12 +371,11 @@ function initCounter() {
    7. MÚSICA
    ============================================================ */
 function initMusic() {
-  const audio  = $('audio-player');
-  const btn    = $('play-pause-btn');
-  const vol    = $('volume-slider');
-  const prog   = $('progress-bar');
+  const audio = $('audio-player');
+  const btn   = $('play-pause-btn');
+  const vol   = $('volume-slider');
+  const prog  = $('progress-bar');
 
-  audio.src    = CONFIG.songSrc;
   audio.volume = parseFloat(vol.value);
 
   btn.addEventListener('click', () => {
