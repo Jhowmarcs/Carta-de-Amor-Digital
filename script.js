@@ -49,7 +49,7 @@ Te amo mais do que qualquer palavra consegue dizer. ❤️`,
 
   /* Linha do tempo */
   timeline: [
-    { date: "Janeiro 2020",    title: "Nos conhecemos",        desc: "O dia em que o destino nos colocou no mesmo caminho." },
+    { date: "Janeiro 2020",    title: "Nos conhecemos",        desc: "O dia em que Deus nos colocou no mesmo caminho." },
     { date: "Fevereiro 2020",  title: "Primeiro encontro",     desc: "Nervos, sorrisos e a certeza de que algo especial começava." },
     { date: "Março 2020",      title: "Primeiro beijo",        desc: "Um momento que ficará para sempre guardado no coração." },
     { date: "Abril 2020",      title: "Pedido de namoro",      desc: "\"Você quer namorar comigo?\" — a melhor pergunta da minha vida." },
