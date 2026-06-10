@@ -11,7 +11,7 @@ const CONFIG = {
   relationshipDate: "2024-10-26",         // Data de início do relacionamento (YYYY-MM-DD)
   relationshipLabel:"Desde 26 de Outubro de 2024",
 
-  letterText: `Meu amor,
+  letterText: `Emily, meu amor,
 
 Cada dia ao seu lado é um presente que o universo me deu. Quando te olho, vejo a pessoa mais incrível que já conheci — cheia de luz, força e carinho.
 
@@ -21,7 +21,7 @@ Escrevo essas palavras porque quero que você saiba: você é meu lar. Onde voc�
 
 Te amo mais do que qualquer palavra consegue dizer. ❤️`,
 
-  letterSignature:  "Para sempre seu(sua) 💕",
+  letterSignature:  "Para sempre seu 💕",
 
   /* Fotos do carrossel: substitua pelas URLs/caminhos das suas fotos.
      Adicione quantas quiser (até 20 recomendado). */
@@ -51,7 +51,7 @@ Te amo mais do que qualquer palavra consegue dizer. ❤️`,
   timeline: [
     { date: "Janeiro 2020",    title: "Nos conhecemos",        desc: "O dia em que Deus nos colocou no mesmo caminho." },
     { date: "Fevereiro 2020",  title: "Primeiro encontro",     desc: "Nervos, sorrisos e a certeza de que algo especial começava." },
-    { date: "Março 2020",      title: "Primeiro beijo",        desc: "Um momento que ficará para sempre guardado no coração." },
+    { date: "Março 2020",      title: "Primeiro presente",        desc: "Um momento que ficará para sempre guardado no coração." },
     { date: "Abril 2020",      title: "Pedido de namoro",      desc: "\"Você quer namorar comigo?\" — a melhor pergunta da minha vida." },
     { date: "Dezembro 2020",   title: "Primeira viagem juntos",desc: "Descobrindo o mundo lado a lado." },
     { date: "2021",            title: "Construindo sonhos",    desc: "Cada dia escrevendo uma história mais bonita." },
