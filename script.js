@@ -49,12 +49,11 @@ Te amo mais do que qualquer palavra consegue dizer. ❤️`,
 
   /* Linha do tempo */
   timeline: [
-    { date: "Janeiro 2020",    title: "Nos conhecemos",        desc: "O dia em que Deus nos colocou no mesmo caminho." },
-    { date: "Fevereiro 2020",  title: "Primeiro encontro",     desc: "Nervos, sorrisos e a certeza de que algo especial começava." },
-    { date: "Março 2020",      title: "Primeiro presente",        desc: "Um momento que ficará para sempre guardado no coração." },
-    { date: "Abril 2020",      title: "Pedido de namoro",      desc: "\"Você quer namorar comigo?\" — a melhor pergunta da minha vida." },
-    { date: "Dezembro 2020",   title: "Primeira viagem juntos",desc: "Descobrindo o mundo lado a lado." },
-    { date: "2021",            title: "Construindo sonhos",    desc: "Cada dia escrevendo uma história mais bonita." },
+    { date: "12 de Outubro de 2021", title: "Primeira conversa", desc: "O dia em que Deus nos colocou no mesmo caminho." },
+    { date: "27 de Outubro de 2021", title: "Primeiro encontro", desc: "Nervos, sorrisos e a certeza de que algo especial começava." },
+    { date: "07 de Fevereiro de 2022", title: "Pedido de namoro", desc: "\"Você quer namorar comigo?\" — a melhor pergunta da minha vida." },
+    { date: "10 de Agosto de 2022", title: "Pedido de casamento", desc: "Decidi viver para sempre com vocêlado." },
+    { date: "26 de Outubro de 2024", title: "Construindo sonhos", desc: "O grande dia." },
   ],
 
   /* 100 Motivos */
